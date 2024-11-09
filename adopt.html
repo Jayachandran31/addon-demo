@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stray Pets - Adopt</title>
+    <link rel="stylesheet" href="adopt.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">Stray Pets</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="abtus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="enquire.html">Enquiry</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Adopt a Pet</h1>
+        <p>Find your new best friend among our available pets!</p>
+    </header>
+    <section class="adopt">
+        <h2>Available Pets for Adoption</h2>
+        <div class="panel">
+        <!-- Pet Card 1 -->
+        <div class="pet-card">
+            <img src="assets/images/lab.jpg" alt="Pet 1">
+            <h3>Max</h3>
+            <p>Breed: Labrador | Age: 2 years</p>
+            <form action="adopt-application.html" method="GET">
+                <!-- Pass the pet name and details to the adoption form -->
+                <input type="hidden" name="pet_name" value="Max">
+                <input type="hidden" name="pet_breed" value="Labrador">
+                <input type="hidden" name="pet_age" value="2 years">
+                <button type="submit" class="button">Apply to Adopt</button>
+            </form>
+        </div>
+
+        <div class="pet-card">
+            <img src="assets/images/kitten.jpg" alt="Pet 3">
+            <h3>Maggie</h3>
+            <p>Breed: Persian Cat| Age: 8 Months</p>
+            <form action="adopt-application.html" method="GET">
+                <!-- Pass the pet name and details to the adoption form -->
+                <input type="hidden" name="pet_name" value="Maggie">
+                <input type="hidden" name="pet_breed" value="Persian Kitten">
+                <input type="hidden" name="pet_age" value="8 Months">
+                <button type="submit" class="button">Apply to Adopt</button>
+            </form>
+        </div>
+
+        <!-- Pet Card 2 -->
+        <div class="pet-card">
+            <img src="./assets/images/beagle.jpg" alt="Pet 2">
+            <h3>Bella</h3>
+            <p>Breed: Beagle | Age: 3 years</p>
+            <form action="adopt-application.html" method="GET">
+                <!-- Pass the pet name and details to the adoption form -->
+                <input type="hidden" name="pet_name" value="Bella">
+                <input type="hidden" name="pet_breed" value="Beagle">
+                <input type="hidden" name="pet_age" value="3 years">
+                <button type="submit" class="button">Apply to Adopt</button>
+            </form>
+        </div>
+        </div>
+        <!-- Add more pet cards as needed -->
+    </section>
+    <section class="adopted">
+        <h2>Adopted Pets</h2>
+        <div class="panel1">
+        <!-- Pet Card 1 -->
+        <div class="adopt-card">
+            <img src="./assets/images/adopt1.jpg" alt="Pet 2">
+            <h3>Neira - Husky</h3>
+            <p>Neira,a 3 years old Husky was adopted by Raghul.</p>
+            <form action="adopted-application.html" method="GET">
+                <button type="submit" class="button">View More</button>
+            </form>
+        </div>
+
+        <div class="adopt-card">
+            <img src="./assets/images/adopt2.jpg" alt="Pet 3">
+            <h3>Jake - Husky</h3>
+            <p>Jake, a 4 years old Husky adopted by Saran.</p>
+            <form action="adopted-application.html" method="GET">
+                <button type="submit" class="button">View More</button>
+            </form>
+        </div>
+        </div>
+        <!-- Add more pet cards as needed -->
+    </section>
+    <footer>
+        <p>&copy; 2024 Stray Pets Organization</p>
+    </footer>
+</body>
+</html>

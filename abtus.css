@@ -1,0 +1,310 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8; /* Light blue background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: background-color 0.3s ease;
+}
+
+/* Logo styling in the nav */
+nav .logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Navigation links list style */
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Navigation link styling */
+nav .nav-links li {
+    margin-right: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects for nav links */
+nav .nav-links a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white;
+}
+
+/* Hover effect for the logo */
+nav .logo a:hover {
+    color: #ffcc00; /* Yellow color on hover */
+}
+
+/* Header Section */
+header {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #0056b3; /* Dark blue header */
+    color: white;
+    margin-top: 60px;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-size: 3em;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on header */
+header:hover h1 {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    background-color: #e1f5fe; /* Light blue background */
+    color: #0277bd; /* Medium blue for text */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    color: #0277bd;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.about img {
+    max-width: 80%; /* Control image size */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+.about img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Mission Section */
+.mission {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #81d4fa; /* Soft blue background */
+    color: #0277bd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2.5em;
+    color: #0277bd;
+    margin-bottom: 20px;
+}
+
+.mission p {
+    font-size: 1.2em;
+}
+
+/* Hover effect on Mission section */
+.mission:hover {
+    background-color: #4fc3f7;
+}
+
+.mission p {
+    font-size: 1.2em;
+}
+
+/* Why Adopt Section */
+.adopt {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #b3e5fc; /* Light blue */
+    color: #0277bd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.adopt h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.adopt p {
+    font-size: 1.2em;
+}
+
+/* Hover effect on Adopt section */
+.adopt:hover {
+    background-color: #81d4fa;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #4fc3f7;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact ul li {
+    margin-bottom: 10px;
+}
+
+.contact ul li strong {
+    color: #0056b3;
+}
+
+/* Hover effect on Contact section */
+.contact:hover {
+    background-color: #81d4fa;
+}
+
+/* Footer Section */
+footer {
+    background-color: #0277bd;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Push footer to the bottom */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on Footer */
+footer:hover {
+    background-color: #0056b3;
+}
+
+/* Intersection Observer Class */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centering links in mobile */
+    }
+
+    nav .logo a {
+        font-size: 28px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .about img {
+        width: 80%;
+    }
+
+    .contact ul {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .about, .mission, .adopt, .contact {
+        padding: 30px;
+    }
+}

@@ -1,0 +1,287 @@
+/* General Styles for Body */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1; /* Light, elegant background */
+    color: #333; /* Default text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure nav is always on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+}
+
+/* Logo styling in the nav */
+nav .logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Navigation links list style */
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Navigation link styling */
+nav .nav-links li {
+    margin-right: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Hover effects for nav links */
+nav .nav-links a:hover {
+    background-color: #007bff;
+    color: white;
+}
+/* Header Styles */
+header {
+    background-color: #007bff; /* Soft blue header */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+    border-bottom: 4px solid #0056b3; /* Adds depth and contrast */
+    transform: translateY(-50px); /* Start header slightly off-screen */
+    opacity: 0; /* Hide initially */
+    animation: slideIn 1s ease-out forwards; /* Animation for slide-in */
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0); /* Final position */
+        opacity: 1;
+    }
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 2px; /* Wider letter spacing for elegance */
+    font-weight: 700;
+    text-transform: uppercase; /* Adds impact to the title */
+}
+
+header p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: 300; /* Lighter font for contrast */
+    opacity: 0.9; /* Slightly faded for emphasis on the heading */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation for subheading */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Enquiry Section Styles */
+.enquiry {
+    background-color: white;
+    padding: 40px 30px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(40px); /* Initial downward position */
+    opacity: 0; /* Hidden initially */
+    animation: fadeInUp 0.8s ease-out forwards 0.5s; /* Slide up and fade-in animation */
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.enquiry:hover {
+    transform: translateY(-5px); /* Slightly lifts the section on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+.enquiry h2 {
+    font-size: 2.8em;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.enquiry form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form elements */
+}
+
+.enquiry label {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    transform: translateX(-10px); /* Slight left position at start */
+    opacity: 0; /* Hidden initially */
+    animation: labelSlideIn 0.5s ease-out forwards; /* Animation to bring in the label */
+}
+
+@keyframes labelSlideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.enquiry input[type="text"],
+.enquiry input[type="email"],
+.enquiry textarea {
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    outline: none;
+    color: #333;
+    transform: scale(0.98); /* Shrink on initial render for subtle effect */
+    opacity: 0; /* Hidden initially */
+    animation: inputFocusIn 0.5s ease-out forwards 0.3s; /* Animation to fade in input */
+}
+
+@keyframes inputFocusIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.enquiry input[type="text"]:focus,
+.enquiry input[type="email"]:focus,
+.enquiry textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Subtle glow effect */
+}
+
+.enquiry textarea {
+    resize: vertical;
+    min-height: 150px; /* Ensures a larger area for messages */
+}
+
+.enquiry button {
+    padding: 15px;
+    font-size: 1.3em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    transform: scale(0.95); /* Initial shrink effect */
+    opacity: 0; /* Hidden initially */
+    animation: buttonPopIn 0.5s ease-out forwards 0.7s; /* Button pop-in effect */
+}
+
+@keyframes buttonPopIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.enquiry button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Button lift effect on hover */
+}
+
+.enquiry button:active {
+    transform: translateY(1px); /* Slight press effect when clicked */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark footer background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    opacity: 0;
+    animation: footerSlideIn 1s ease-out forwards 1.5s; /* Slide-up footer effect */
+}
+
+@keyframes footerSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.6em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .enquiry {
+        padding: 30px 20px;
+        margin: 40px auto;
+        max-width: 90%; /* Expand the form on smaller devices */
+    }
+
+    .enquiry h2 {
+        font-size: 2em;
+    }
+
+    .enquiry label {
+        font-size: 1.1em;
+    }
+
+    .enquiry input[type="text"],
+    .enquiry input[type="email"],
+    .enquiry textarea {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .enquiry button {
+        font-size: 1.2em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}

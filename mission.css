@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and page setup */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #eaf4fc; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Navigation Styles */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure nav is always on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+}
+
+/* Logo styling in the nav */
+nav .logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Navigation links list style */
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Navigation link styling */
+nav .nav-links li {
+    margin-right: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Hover effects for nav links */
+nav .nav-links a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Header Styles */
+header {
+    background-color: #007BFF; /* Primary Blue */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+h1 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+/* Mission Section Styles */
+.mission {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mission h2 {
+    font-size: 2em;
+    color: #0056b3; /* Blue for headings */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.mission:hover h2 {
+    color: #003f7f; /* Darker blue on hover */
+}
+
+.mission p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.mission p:hover {
+    opacity: 1;
+}
+
+/* Image Styling */
+.mission img {
+    width: 100%; /* Adjusts the width to 100% of its container */
+    height: 700px; /* Keeps the aspect ratio intact */
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin: 20px 0; /* Adds spacing above and below the image */
+}
+
+.mission img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    filter: brightness(90%);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #003366; /* Dark blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #002244; /* Darker blue on hover */
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Ensure Footer Sticks at the Bottom */
+main {
+    flex: 1; /* This ensures the content section expands to take available space */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mission {
+        padding: 20px;
+    }
+
+    .mission h2 {
+        font-size: 1.8em;
+    }
+
+    .mission p {
+        font-size: 1em;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+}

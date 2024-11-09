@@ -1,0 +1,176 @@
+/* Ensure the body and html take full height */ 
+html, body {
+    height: 100%;  /* Make sure the body and html take up the full height */
+    margin: 0;     /* Remove default margin */
+}
+
+/* Apply flexbox to the body to ensure the footer stays at the bottom */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("./assets/images/pexels-eduardo-sepulveda-3187799-7799219.jpg");  /* Background image */
+    background-size: cover;      /* Cover the entire body with the image */
+    background-position: center; /* Center the background image */
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent white background */
+}
+
+/* Navigation bar styles */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure nav is always on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+}
+
+/* Logo styling in the nav */
+nav .logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Navigation links list style */
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Navigation link styling */
+nav .nav-links li {
+    margin-right: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Hover effects for nav links */
+nav .nav-links a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Header style */
+header {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);  /* Semi-transparent white for header */
+}
+
+header > h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Button styling */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section (overview and other sections) styling with transition */
+section {
+    position: relative;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(20px); /* Slightly translated down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+/* Hover effect for sections */
+section:hover {
+    background-color: rgba(0, 123, 255, 0.1);  /* Light blue background on hover */
+    transform: translateY(0);  /* Move back to original position */
+}
+
+/* Add visible class to trigger transition when section is in view */
+section.visible {
+    opacity: 1;  /* Fade in */
+    transform: translateY(0); /* Slide into position */
+}
+
+/* Overview section specific styling */
+.overview {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.overview h2 {
+    color: #343a40;
+    transition: color 0.3s ease;
+}
+
+.overview p {
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;  /* Push footer to the bottom */
+}
+
+/* Adopt section */
+.adopt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Pet card styling */
+.pet-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.pet-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Pet card hover effect */
+.pet-card:hover {
+    transform: scale(1.05); /* Scale up when hovering */
+}
